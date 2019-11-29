@@ -8,10 +8,11 @@ Toutes les ressources sont organisées par technologie, pour trouver des ressour
 
 ### Comment participer ?
 1. Forker le projet **(pas clonner!!!)** 
-2. Ajouter votre modification en suivant l'organisation établie
-3. `git push` sur votre repository
-4. Faire une Pull Request
-5. Si tout est en ordre (organisation fichier/dossier, syntaxe, pas de doublon...) je merge, sinon je commente pour voir si c'est une erreur ou si vous voulez modifier votre changement. Puis si si tout est enfin en ordre, je merge.  
+2. Créer une branche
+3. Ajouter votre modification en suivant l'organisation établie
+4. `git push` votre branch sur votre repository
+5. Faire une Pull Request
+6. Si tout est en ordre (organisation fichier/dossier, syntaxe, pas de doublon...) je merge, sinon je commente pour voir si c'est une erreur ou si vous voulez modifier votre changement. Puis si si tout est enfin en ordre, je merge.  
 
 Si vous constater une erreur, ouvrez une issue et détailler au mieux le problème, moi ou l'un des contributeur nous feront un plaisir de la corriger.
 
