@@ -15,6 +15,9 @@ Toutes les ressources sont organisées par technologie, pour trouver des ressour
 
 Si vous constater une erreur, ouvrez une issue et détailler au mieux le problème, moi ou l'un des contributeur nous feront un plaisir de la corriger.
 
+### Comment Organiser vos ressources ?
+[Voir cette page](wip.md)
+
 ### Code de conduite
 Ce cahier n'a pas pour but d'être un programme ou d'évangéliser tel ou tel technologie, l'idée est simplement de partager nos meilleures ressources avec la communauté. pour le débat des technologie et le jugement du choix d'autrui, les réseaux sociaux sont tout indiqués, ici on partage simplement dans le but d'aider...
 

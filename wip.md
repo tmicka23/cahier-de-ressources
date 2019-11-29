@@ -1,9 +1,7 @@
-# Ce fichier sera bientôt supprimer
+# **Cahier en cours d'élaboration**
+## *Si vous voulez participer voici comment organiser les ressources :*
 
-# Cahier en cours d'élaboration
-Si vous voulez participer voici comment organiser les ressources :
-
-*exemple avec le css :*
+### *exemple avec le css :*
 
 * css/
     * css.md
