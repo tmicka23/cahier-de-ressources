@@ -1,14 +1,18 @@
+**[Accueil](README.md)** | **[Liste des technologies](cahier.md)**
+
 # Liste des langages/disciplines disponibles
 
-* [HTML](wip.md)
-* [CSS](wip.md)
-* [JavaScript](wip.md)
-* [PHP](wip.md)
-* [Ruby](wip.md)
-* [Python](wip.md)
-* [Java](wip.md)
-* [Devops](wip.md)
-* [WebDesign](wip.md)
+* [HTML](html/html.md)
+* [CSS](css/css.md)
+* [JavaScript](javascript/javascript.md)
+* [PHP](php/php.md)
+* [Ruby](ruby/ruby.md)
+* [Python](python/python.md)
+* [Java](java/java.md)
+* [Devops](devops/devops.md)
+* [WebDesign](webdesign/webdesign.md)
+* [seo](seo/seo.md)
+* [logiciels](logiciels/logiciels.md)
 
 
 
