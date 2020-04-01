@@ -1,3 +1,5 @@
+**[Accueil](/README.md)** | **[Liste des technologies](/cahier.md)**
+
 # **Cahier en cours d'élaboration**
 ## *Si vous voulez participer voici comment organiser les ressources :*
 
@@ -24,7 +26,7 @@
 
 Respectez une forme d'arbre et linkez vos fichiers dans le css.md.
 
-Dans le css.md linkez toutes vos ressources sur le css vanilla, puis réservez une section **"Autour de css"** avec les liens vers les fichiers des sous dossiers, faites un titre h3 pour chaque dossiers, exemple : 
+Dans le css.md linkez toutes vos ressources sur le css vanilla, puis réservez une section **"Autour de css"** avec les liens vers les fichiers des sous dossiers, faites un titre h3 pour chaque dossiers, exemple :
 
 ###############################################
 

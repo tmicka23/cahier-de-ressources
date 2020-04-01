@@ -1,6 +1,6 @@
-**[Accueil](../README.md)** | **[Liste des technologies](../cahier.md)**
+**[Accueil](/README.md)** | **[Liste des technologies](/cahier.md)**
 
-# Liste des ressources sur CSS 
+# Liste des ressources sur CSS
 
 ### [Documentation Officielle](https://developer.mozilla.org/fr/docs/Web/CSS)
 
