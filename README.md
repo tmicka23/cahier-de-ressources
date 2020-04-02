@@ -38,6 +38,8 @@ Si vous constater une erreur, ouvrez une issue et détailler au mieux le problè
  git pull upstream master
 ```
 
+[Cheat sheet Markdown](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+
 ### Comment Organiser vos ressources ?
 [Voir cette page](wip.md)
 
