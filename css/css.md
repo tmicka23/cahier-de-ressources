@@ -32,9 +32,9 @@
 * **Outils**
 	* Check my CSS(http://csslint.net/)
 
-#Cheat Sheet
+# Cheat Sheet
 
-##Appeler un fichier CSS
+## Appeler un fichier CSS
 
 3 façons de faire : 
 
@@ -66,14 +66,14 @@ Bien penser à spécifier correctement le chemin vers le fichier CSS. S'il est d
 <link rel="stylesheet" type="text/css" href="/mon-dossier/style.css">
 ```
 
-##Les sélecteurs CSS
+## Les sélecteurs CSS
 
 Il existe en CSS trois moyens de définir un style à un élément : 
 * Les balises
 * Les classes
 * Les ID
 
-###Les balises
+### Les balises
 
 Il est possible d'assigner un style à des balises en spécifiant simplement leur nom : 
 
@@ -85,7 +85,7 @@ h1 {
 
 Dans cet exemple, toutes les balises ```<h1>``` seront de couleur bleue.
 
-###Les classes
+### Les classes
 
 Il est possible d'assigner un style à des éléments en fonction de leur classe précisée dans l'attribut ```class="ma-classe"``` en ajoutant un **point** avant le nom de la classe : 
 
@@ -97,7 +97,7 @@ Il est possible d'assigner un style à des éléments en fonction de leur classe
 
 Dans cet exemple, tous les éléments ayant la classe **ma-classe** auront un background de couleur verte.
 
-###Les ID
+### Les ID
 
 Il est enfin possible d'appliquer un style à des éléments en fonction de leur identifiant précisé dans l'attribut ```id="mon-id"``` en ajoutant un **dièse** avant le nom de l'identifiant : 
 
