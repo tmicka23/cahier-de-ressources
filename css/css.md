@@ -38,7 +38,7 @@
 
 3 façons de faire : 
 
-* Inline (à proscrire)
+* **Inline** (à proscrire)
 
 Il est possible de rédiger du CSS directement dans un fichier HTML à l'aide de l'attribut style, placé dans une balise HTML.
 
@@ -46,11 +46,11 @@ Exemple :
 
 ```<div style="color:blue;font-size:28px;">Lorem Ipsum</div>```
 
-* Entre des balises ```<style>``` (à proscrire)
+* **Entre des balises ```<style>```** (à proscrire)
 
 Placée dans le ```<head>```, la balise ```<style>``` permet également d'intégrer du CSS dans un fichier HTML
 
-* Dans un fichier CSS externe
+* **Dans un fichier CSS externe**
 
 Il est fortement conseillé de rédiger son CSS dans un fichier séparé. Une fois fait, il devra être appelé dans le head du document html afin de l'appliquer à la page.
 
@@ -115,11 +115,11 @@ Dans cet exemple, l'élement ayant pour identifiant **mon-id** aura son texte so
 
 ### Les propriétés flexbox
 
-* [flex-direction](####-Flex-direction)
-* [flex-wrap](####-Flex-wrap)
-* [flex-flow](####-Flex-flow)
-* [justify-content](####-Justify-content)
-* [align-items](####-Align-items)
+* [flex-direction](#-Flex-direction)
+* [flex-wrap](#-Flex-wrap)
+* [flex-flow](#-Flex-flow)
+* [justify-content](#-Justify-content)
+* [align-items](#-Align-items)
 
 #### Flex-direction
 
