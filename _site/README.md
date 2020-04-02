@@ -44,4 +44,4 @@ Si vous constater une erreur, ouvrez une issue et détailler au mieux le problè
 ### Code de conduite
 Ce cahier n'a pas pour but d'être un programme ou d'évangéliser tel ou tel technologie, l'idée est simplement de partager nos meilleures ressources avec la communauté. pour le débat des technologie et le jugement du choix d'autrui, les réseaux sociaux sont tout indiqués, ici on partage simplement dans le but d'aider...
 
-[Voir le cahier](cahier.md)
+[Voir le cahier](https://tmicka23.github.io/cahier-de-ressources/)
