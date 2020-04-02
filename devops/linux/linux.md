@@ -128,18 +128,18 @@ Prenoms.csv est redirigé vers grep (<) où l’on ne va garder que le genre fé
 Exemple 2:
 ```shell
  $ grep swedish Prenoms.csv > Swedish.csv
- ```
  Filtre Prenoms.csv avec le critère swedish et renvoie ça vers un fichier Swedish.csv
-
+ ```
+ 
 Exemple 3:
-Créer un fichier php_france_2019.csv contenant uniquement le nombre de wilders ayant fait du PHP, sur un campus en France, en 2019, à partir d’un fichier wilders.csv
 ```shell
+Créer un fichier php_france_2019.csv contenant uniquement le nombre de wilders ayant fait du PHP, sur un campus en France, en 2019, à partir d’un fichier wilders.csv
  $  grep "France,2019,PHP"< wilders.csv | w -l  >  php_france_2019.csv
  ```
 
 Exemple 4:
-Créer un fichier javascript_biarritz_toulouse.csv contenant uniquement les wilders ayant fait du JavaScript, sur les campus de Toulouse et Biarritz. Indice : tu peux avoir besoin de créer des fichiers "intermédiaires", et de les concaténer.
 ```shell
+Créer un fichier javascript_biarritz_toulouse.csv contenant uniquement les wilders ayant fait du JavaScript, sur les campus de Toulouse et Biarritz. Indice : tu peux avoir besoin de créer des fichiers "intermédiaires", et de les concaténer.
  $  grep Toulouse wilders.csv > toulouse.csv  
  $	grep JavaScript toulouse.csv > javascript_biarritz_toulouse.csv
  $	grep Biarritz wilders.csv > biarritz.csv
