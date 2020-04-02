@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=b44d5fd4b78ebe7e374b6f547cacb504de8da829">
+    <link rel="stylesheet" href="/assets/css/style.css?v=4f893ba16de34064b53489c55db59644a2e64286">
     <style media="screen">
       nav.navbar li {
         list-style: none;
@@ -39,6 +39,17 @@
         padding-left: 0;
         display: flex;
         justify-content: center;
+        background-color: rgb(44, 67, 77);
+        border-radius: 4px;
+        box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.5);
+      }
+
+      @media only screen and (max-width: 900px){
+        nav.navbar li a {
+          margin: 0 8px;
+          font-size: 20px;
+          font-weight: 500;
+        }
       }
     </style>
   </head>
@@ -55,8 +66,8 @@
 
       <nav class="navbar">
         <ul>
-          <li><a href="https://tmicka23.github.io/cahier-de-ressources/">\ Accueil</a></li>
-          <li><a href="https://tmicka23.github.io/cahier-de-ressources/cahier.html">\ Liste des technologies</a></li>
+          <li><a href="https://tmicka23.github.io/cahier-de-ressources/">Accueil</a></li>
+          <li><a href="https://tmicka23.github.io/cahier-de-ressources/cahier.html">Liste des technos</a></li>
         </ul>
       </nav>
     </header>
@@ -77,6 +88,11 @@
       <li><a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3">niveau débutant</a></li>
       <li><a href="https://openclassrooms.com/fr/courses/5919246-creez-des-animations-css-modernes">niveau intermédiaire</a></li>
       <li><a href="https://openclassrooms.com/fr/courses/2745636-utilisez-les-effets-avances-de-css-sur-votre-site">niveau avancé</a></li>
+    </ul>
+  </li>
+  <li>Flexbox Froggy
+    <ul>
+      <li><a href="https://flexboxfroggy.com/#fr">S’entrainer sur Flexbox</a></li>
     </ul>
   </li>
 </ul>
@@ -100,10 +116,251 @@
       <li><a href="preprocesseurs/compass.md">Compass</a></li>
       <li><a href="preprocesseurs/stylus.md">Stylus</a></li>
     </ul>
-
-    <p>TEST AMELIE</p>
+  </li>
+  <li><strong>Outils</strong>
+    <ul>
+      <li><a href="http://csslint.net/">Check my CSS</a></li>
+    </ul>
   </li>
 </ul>
+
+<h1 id="cheat-sheet">Cheat Sheet</h1>
+
+<h2 id="sommaire">Sommaire</h2>
+
+<ul>
+  <li><a href="#appeler-un-fichier-CSS">Appeler un fichier CSS</a>
+    <ul>
+      <li><a href="#inline">Inline</a> <strong>à proscrire</strong></li>
+      <li><a href="#entre-des-balises-styles">Entre balises <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code></a> <strong>à proscrire</strong></li>
+      <li><a href="#depuis-un-fichier-CSS-externe">Depuis un fichier CSS externe</a></li>
+    </ul>
+  </li>
+  <li><a href="#les-sélecteurs-CSS">Les sélecteurs CSS</a>
+    <ul>
+      <li><a href="#les-balises">Balises</a></li>
+      <li><a href="#les-classes">Classes</a></li>
+      <li><a href="#les-id">ID</a></li>
+    </ul>
+  </li>
+  <li><a href="#les-pseudos-classes">Les pseudos-classes</a>
+    <ul>
+      <li><a href="#sélectionner-un-élément">Sélectionner un élément</a></li>
+      <li><a href="#styliser-un-état">Styliser un état</a></li>
+    </ul>
+  </li>
+  <li><a href="#flexbox">Flexbox</a>
+    <ul>
+      <li><a href="#les-propriétés-flexbox">Les propriétés Flexbox</a></li>
+      <li><a href="#flex-direction">Flex-direction</a></li>
+      <li><a href="#flex-wrap">Flex-wrap</a></li>
+      <li><a href="#flex-flow">Flex-flow</a></li>
+      <li><a href="#justify-content">Justify-content</a></li>
+      <li><a href="#align-items">Align-items</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="appeler-un-fichier-css">Appeler un fichier CSS</h3>
+
+<p>3 façons de faire :</p>
+
+<h4 id="inline"><strong>Inline</strong></h4>
+
+<p>Il est possible de rédiger du CSS directement dans un fichier HTML à l’aide de l’attribut style, placé dans une balise HTML.</p>
+
+<p>Exemple :</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"color:blue;font-size:28px;"</span><span class="nt">&gt;</span>Lorem Ipsum<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h4 id="entre-des-balises-style"><strong>Entre des balises <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code></strong></h4>
+
+<p>Placée dans le <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>, la balise <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> permet également d’intégrer du CSS dans un fichier HTML</p>
+
+<h4 id="depuis-un-fichier-css-externe"><strong>Depuis un fichier CSS externe</strong></h4>
+
+<p>Il est fortement conseillé de rédiger son CSS dans un fichier séparé. Une fois fait, il devra être appelé dans le head du document html afin de l’appliquer à la page.</p>
+
+<p>Pour ce faire, utiliser la balise <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> de la manière suivante :</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>Bien penser à spécifier correctement le chemin vers le fichier CSS. S’il est dans le même dossier que le fichier HTML, il s’uffit d’écrire son nom. S’il se trouve dans un dossier enfant, spécifier comme suit :</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"/mon-dossier/style.css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="les-sélecteurs-css">Les sélecteurs CSS</h3>
+
+<p>Il existe en CSS trois moyens de définir un style à un élément :</p>
+<ul>
+  <li>Les balises</li>
+  <li>Les classes</li>
+  <li>Les ID</li>
+</ul>
+
+<h4 id="les-balises">Les balises</h4>
+
+<p>Il est possible d’assigner un style à des balises en spécifiant simplement leur nom :</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">h1</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span><span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Dans cet exemple, toutes les balises <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> seront de couleur bleue.</p>
+
+<h4 id="les-classes">Les classes</h4>
+
+<p>Il est possible d’assigner un style à des éléments en fonction de leur classe précisée dans l’attribut <code class="language-plaintext highlighter-rouge">class="ma-classe"</code> en ajoutant un <strong>point</strong> avant le nom de la classe :</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.ma-classe</span> <span class="p">{</span>
+	<span class="nl">background-color</span><span class="p">:</span><span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Dans cet exemple, tous les éléments ayant la classe <strong>ma-classe</strong> auront un background de couleur verte.</p>
+
+<h4 id="les-id">Les ID</h4>
+
+<p>Il est enfin possible d’appliquer un style à des éléments en fonction de leur identifiant précisé dans l’attribut <code class="language-plaintext highlighter-rouge">id="mon-id"</code> en ajoutant un <strong>dièse</strong> avant le nom de l’identifiant :</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#mon-id</span> <span class="p">{</span>
+	<span class="nl">text-decoration</span><span class="p">:</span><span class="nb">underline</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Dans cet exemple, l’élement ayant pour identifiant <strong>mon-id</strong> aura son texte souligné.</p>
+
+<h3 id="les-pseudos-classes">Les pseudos classes</h3>
+
+<h4 id="sélectionner-un-élément">Sélectionner un élément</h4>
+
+<p>Il est possible de sélectionner des éléments sans leur attribuer de classe ou d’ID grâce aux pseudos classes.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">:first-child</code> : modifie le style du premier élément enfant de son parent</li>
+  <li><code class="language-plaintext highlighter-rouge">:nth-child</code> : modifie le style du n ième élément enfant de son parent</li>
+  <li><code class="language-plaintext highlighter-rouge">:first-of-type</code> : modifie le style du premier élément enfant du type choisi de son parent</li>
+  <li><code class="language-plaintext highlighter-rouge">:nth-of-type</code> : modifie le style du n ième élément enfant du type choisi de son parent</li>
+</ul>
+
+<p><a href="https://codepen.io/GCR/pen/OJVGzyj?editors=1100">Voir sur codepen</a></p>
+
+<h4 id="styliser-un-état">Styliser un état</h4>
+
+<p>Il est possible de styliser des états particuliers grâce aux pseudos classes.</p>
+
+<p>On peut ainsi définir un style au survol de la souris grâce à la pseudo classe :hover comme ceci :</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">a</span> <span class="p">{</span>
+	<span class="nl">opacity</span><span class="p">:</span><span class="m">0.8</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+	<span class="nl">opacity</span><span class="p">:</span><span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Dans cet exemple, lorsqu’on survolera un lien, l’opacité de l’élément passera de 0.8 à 1.</p>
+
+<p><a href="https://codepen.io/GCR/pen/GRJLyxO">Voir sur codepen</a></p>
+
+<h4 id="styliser-un-état-1">Styliser un état</h4>
+
+<h3 id="flexbox">Flexbox</h3>
+
+<h4 id="les-propriétés-flexbox">Les propriétés flexbox</h4>
+
+<ul>
+  <li><a href="#flex-direction">Flex-direction</a></li>
+  <li><a href="#flex-wrap">Flex-wrap</a></li>
+  <li><a href="#flex-flow">Flex-flow</a></li>
+  <li><a href="#justify-content">Justify-content</a></li>
+  <li><a href="#align-items">Align-items</a></li>
+</ul>
+
+<h5 id="flex-direction">Flex-direction</h5>
+
+<h6 id="définition">Définition</h6>
+
+<p>La propriété <code class="language-plaintext highlighter-rouge">flex-direction</code> définit la direction dans laquelle le conteneur veut aligner ses éléments enfants</p>
+
+<p>Elle peut accepter 4 valeurs :</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">flex-direction: row;</code> (par défaut) : les enfants s’aligneront en lignes</li>
+  <li><code class="language-plaintext highlighter-rouge">flex-direction: row-reverse;</code> : les enfants s’aligneront en lignes inversées</li>
+  <li><code class="language-plaintext highlighter-rouge">flex-direction: column;</code> : les enfants s’aligneront en colonnes</li>
+  <li><code class="language-plaintext highlighter-rouge">flex-direction: column-reverse;</code> : les enfants s’aligneront en colonnes inversées</li>
+</ul>
+
+<p><a href="https://codepen.io/GCR/pen/poJBwrd?editors=1100">voir sur codepen</a></p>
+
+<h5 id="flex-wrap">Flex-wrap</h5>
+
+<h6 id="définition-1">Définition</h6>
+
+<p>La propriété <code class="language-plaintext highlighter-rouge">flex-wrap</code> définit si le parent alignera ses enfants sur une ou plusieurs lignes.</p>
+
+<p>Elle peut accepter 3 valeurs :</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">flex-wrap: nowrap;</code> (par défaut) : les enfants s’aligneront sur une seule ligne et peuvent donc déborder du parent</li>
+  <li><code class="language-plaintext highlighter-rouge">flex-direction: wrap;</code> : les enfants s’aligneront sur plusieurs lignes, de gauche à droite avec saut de ligne en cas de débordement</li>
+  <li><code class="language-plaintext highlighter-rouge">flex-direction: wrap-reverse;</code> : les enfants s’ligneront sur plusieurs lignes de droite à gauche avec saut de ligne en cas de débordement</li>
+</ul>
+
+<p><a href="https://codepen.io/GCR/pen/QWbPgJa">voir sur codepen</a></p>
+
+<h5 id="flex-flow">Flex-flow</h5>
+
+<h6 id="définition-2">Définition</h6>
+
+<p>La propriété <code class="language-plaintext highlighter-rouge">flex-flow</code> permet de paramètrer d’un seul coup les propriétés <code class="language-plaintext highlighter-rouge">flex-direction</code> et <code class="language-plaintext highlighter-rouge">flex-wrap</code>.</p>
+
+<p>Elle s’utilise comme suit :</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">flex-flow</span><span class="o">:</span> <span class="nt">center</span> <span class="nt">nowrap</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>La première valeur renseignée correspond à <code class="language-plaintext highlighter-rouge">flex-direction</code> et la seconde à <code class="language-plaintext highlighter-rouge">flex-wrap</code>.</p>
+
+<h5 id="justify-content">Justify-content</h5>
+
+<h6 id="définition-3">Définition</h6>
+
+<p>La propriété <code class="language-plaintext highlighter-rouge">justify-content</code> définit l’alignement des enfants le long de l’axe principal.</p>
+
+<p>Elle peut accepter 5 valeurs :</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">justify-content: flex-start;</code> (par défaut) : les enfants sont regroupés en début de ligne</li>
+  <li><code class="language-plaintext highlighter-rouge">justify-content: flex-end;</code> : les enfants sont regroupés en fin de ligne</li>
+  <li><code class="language-plaintext highlighter-rouge">justify-content: center;</code> : les enfants sont centrés le long de la ligne</li>
+  <li><code class="language-plaintext highlighter-rouge">justify-content: space-between;</code> : les enfants sont répartis sur la ligne. Le premier enfant est donc collé contre le début de son parent et le dernier enfant contre la fin de son parent.</li>
+  <li><code class="language-plaintext highlighter-rouge">justify-content: space-around;</code> : les enfants sont repartis sur la ligne avec les mêmes marges autour de chacun</li>
+</ul>
+
+<p><a href="https://codepen.io/GCR/pen/poJBwQV">voir sur codepen</a></p>
+
+<h5 id="align-items">Align-items</h5>
+
+<h6 id="définition-4">Définition</h6>
+
+<p>La propriété <code class="language-plaintext highlighter-rouge">align-items</code> définit l’alignement des enfants le long de l’axe secondaire. 
+Si <code class="language-plaintext highlighter-rouge">flex-direction:row</code> est utilisée, <code class="language-plaintext highlighter-rouge">align-items</code> alignera les enfants verticalement.
+Si <code class="language-plaintext highlighter-rouge">flex-direction:column</code> est utilisée, <code class="language-plaintext highlighter-rouge">align-items</code> alignera les enfants horizontalement.</p>
+
+<p>Elle peut accepter 5 valeurs :</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">align-items: flex-start;</code> : les enfants sont regroupés au début de l’axe secondaire</li>
+  <li><code class="language-plaintext highlighter-rouge">align-items: flex-end;</code> : les enfants sont regroupés à la fin de l’axe secondaire</li>
+  <li><code class="language-plaintext highlighter-rouge">align-items: center;</code> : les enfants sont centrés sur l’axe secondaire</li>
+  <li><code class="language-plaintext highlighter-rouge">align-items: baseline;</code> : les enfants sont répartis sur l’axe secondaire. Le premier enfant est donc collé contre le début de son parent et le dernier enfant contre la fin de son parent.</li>
+  <li><code class="language-plaintext highlighter-rouge">align-items: stretch;</code> (par défaut) : les enfants sont étirés jusqu’à remplir le parent (sauf si les dimensions de l’axe correspondant des enfants sont précisées)</li>
+</ul>
+
+<p><a href="https://codepen.io/GCR/pen/NWqmvPy">voir sur codepen</a></p>
+
 
 
       <footer class="site-footer">

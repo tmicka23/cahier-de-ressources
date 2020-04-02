@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=b44d5fd4b78ebe7e374b6f547cacb504de8da829">
+    <link rel="stylesheet" href="/assets/css/style.css?v=4f893ba16de34064b53489c55db59644a2e64286">
     <style media="screen">
       nav.navbar li {
         list-style: none;
@@ -39,6 +39,17 @@
         padding-left: 0;
         display: flex;
         justify-content: center;
+        background-color: rgb(44, 67, 77);
+        border-radius: 4px;
+        box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.5);
+      }
+
+      @media only screen and (max-width: 900px){
+        nav.navbar li a {
+          margin: 0 8px;
+          font-size: 20px;
+          font-weight: 500;
+        }
       }
     </style>
   </head>
@@ -55,8 +66,8 @@
 
       <nav class="navbar">
         <ul>
-          <li><a href="https://tmicka23.github.io/cahier-de-ressources/">\ Accueil</a></li>
-          <li><a href="https://tmicka23.github.io/cahier-de-ressources/cahier.html">\ Liste des technologies</a></li>
+          <li><a href="https://tmicka23.github.io/cahier-de-ressources/">Accueil</a></li>
+          <li><a href="https://tmicka23.github.io/cahier-de-ressources/cahier.html">Liste des technos</a></li>
         </ul>
       </nav>
     </header>
@@ -70,131 +81,131 @@
 <p>La création de classe permet de simplement créer de nouvelles instances (= nouvel Objet) à partir de cette classe et grâce à son constructor. On peut créer aussi une nouvelle classe à partir de cette classe, qui contient tous les attributs et méthodes de la classe parente. On peut lui définir de nouvelles méthodes ou nouveaux attributs ou surcharger des méthodes existantes.</p>
 
 <p>Création d’une classe</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Person {
-   constructor(name) {
-       this.name = name;
-   }
-   sayHello() {
-       console.log(`Hello, my name is ${this.name}`)
-   }
-}
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Person</span> <span class="p">{</span>
+   <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="nx">sayHello</span><span class="p">()</span> <span class="p">{</span>
+       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Hello, my name is </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+   <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>Création d’nue nouvelle instance à partir de la classe Person avec appel de la méthode définie dans Person</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const pedro = new Person("Pedro");
-pedro.sayHello();
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">pedro</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="dl">"</span><span class="s2">Pedro</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">pedro</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">();</span>
 </code></pre></div></div>
 
 <p>Création d’une classe qui hérite de Person, et surcharge ses méthodes</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Students extends Person {
-  constructor (name, school) {
-    // Calls the Person constructor
-    super(name);
-    this.school = school;
-  }
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Students</span> <span class="kd">extends</span> <span class="nx">Person</span> <span class="p">{</span>
+  <span class="kd">constructor</span> <span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">school</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Calls the Person constructor</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">school</span> <span class="o">=</span> <span class="nx">school</span><span class="p">;</span>
+  <span class="p">}</span>
 
-  //surcharge la méthode de Person
-  sayHello() {
-    console.log(`Hello, my name is ${this.name} and I am a student !`);
-  }
+  <span class="c1">//surcharge la méthode de Person</span>
+  <span class="nx">sayHello</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Hello, my name is </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2"> and I am a student !`</span><span class="p">);</span>
+  <span class="p">}</span>
 
-  displaySchool() {
-    console.log(`My school is ${this.school}`);
-  }
+  <span class="nx">displaySchool</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`My school is </span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">school</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+  <span class="p">}</span>
 
-}
+<span class="p">}</span>
 </code></pre></div></div>
 
 <h3 id="les-fonction-flechées">Les fonction flechées</h3>
 <p>Elles permettent d’alléger l’écriture des fonctions.</p>
 
 <p>Déclaration classique</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function nameFunction (params) {
-  // votre code ici
-  return (optionnel, interrompt l'execution de la fonction)
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">nameFunction</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// votre code ici</span>
+  <span class="k">return</span> <span class="p">(</span><span class="nx">optionnel</span><span class="p">,</span> <span class="nx">interrompt</span> <span class="nx">l</span><span class="dl">'</span><span class="s1">execution de la fonction)
 }
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>Ecritures des fonctions flechées</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// écriture basique
-(param1, param2) =&gt; { /* bloc */ }
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// écriture basique</span>
+<span class="p">(</span><span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="cm">/* bloc */</span> <span class="p">}</span>
 
-// Parenthèses non nécessaires si un seul argument
-param1 =&gt; { /* bloc */ }
+<span class="c1">// Parenthèses non nécessaires si un seul argument</span>
+<span class="nx">param1</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="cm">/* bloc */</span> <span class="p">}</span>
 
-// Si aucun paramètres, parenthèses vides
-() =&gt; { /* bloc */ }
+<span class="c1">// Si aucun paramètres, parenthèses vides</span>
+<span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="cm">/* bloc */</span> <span class="p">}</span>
 
-// “return” implicite si une seule ligne d’instruction
-(a, b) =&gt; a + b;
-// équivalent à
-(a, b) =&gt; { return a + b }
+<span class="c1">// “return” implicite si une seule ligne d’instruction</span>
+<span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="c1">// équivalent à</span>
+<span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="p">}</span>
 
-// retourner un objet avec un return implicite :
-() =&gt; ({prop1: "value1", prop2: "value2"})
+<span class="c1">// retourner un objet avec un return implicite :</span>
+<span class="p">()</span> <span class="o">=&gt;</span> <span class="p">({</span><span class="na">prop1</span><span class="p">:</span> <span class="dl">"</span><span class="s2">value1</span><span class="dl">"</span><span class="p">,</span> <span class="na">prop2</span><span class="p">:</span> <span class="dl">"</span><span class="s2">value2</span><span class="dl">"</span><span class="p">})</span>
 </code></pre></div></div>
 
 <h3 id="syntaxe-de-décomposition">Syntaxe de décomposition</h3>
 <p>La syntaxe de décomposition permet d’affecter des propriétés d’un tableau ou d’un objet à des variables en utilisant une syntaxe semblable aux littéraux de tableaux ou aux littéraux objets.</p>
 
 <p>Par exemple, sans l’affectation par décompostion, accéder aux élément d’un tableau se ferait de la manière suivante:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const premier = unTableau[0];
-const deuxième = unTableau[1];
-const troisième = unTableau[2];
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">premier</span> <span class="o">=</span> <span class="nx">unTableau</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">deuxi</span><span class="err">è</span><span class="nx">me</span> <span class="o">=</span> <span class="nx">unTableau</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">troisi</span><span class="err">è</span><span class="nx">me</span> <span class="o">=</span> <span class="nx">unTableau</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
 </code></pre></div></div>
 <p>Avec la syntaxe de décomposition cela se fait de la manière suivante:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const [premier, deuxième, troisième] = unTableau;
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">premier</span><span class="p">,</span> <span class="nx">deuxi</span><span class="err">è</span><span class="nx">me</span><span class="p">,</span> <span class="nx">troisi</span><span class="err">è</span><span class="nx">me</span><span class="p">]</span> <span class="o">=</span> <span class="nx">unTableau</span><span class="p">;</span>
 </code></pre></div></div>
 
 <h3 id="spread-operator">Spread Operator</h3>
 <p>Le spread operator sert à éclater un tableau (ou tout autre itérable) en une liste finie de valeurs.</p>
 
 <p>Exemple</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let args = ['var 1', 'var 2', 'var 1']
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">args</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">var 1</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">var 2</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">var 1</span><span class="dl">'</span><span class="p">]</span>
 
-console.log(...args)
-// == console.log('var 1', 'var 2', 'var 1')
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span>
+<span class="c1">// == console.log('var 1', 'var 2', 'var 1')</span>
 </code></pre></div></div>
 
 <p>Utile par exemple pour la concaténations de tableaux:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let fruits = ['pomme', 'poire', 'abricot']
-let legumes = ['salade', 'asperge']
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">pomme</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">poire</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">abricot</span><span class="dl">'</span><span class="p">]</span>
+<span class="kd">let</span> <span class="nx">legumes</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">salade</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">asperge</span><span class="dl">'</span><span class="p">]</span>
 
-// je veux obtenir ['automne', 'hiver', 'pomme', 'poire', 'abricot', 'voiture', 'salade', 'asperge']
+<span class="c1">// je veux obtenir ['automne', 'hiver', 'pomme', 'poire', 'abricot', 'voiture', 'salade', 'asperge']</span>
 
-let mots = ['automne', 'hiver', ...fruits, 'voiture', ...legumes]
+<span class="kd">let</span> <span class="nx">mots</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">automne</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hiver</span><span class="dl">'</span><span class="p">,</span> <span class="p">...</span><span class="nx">fruits</span><span class="p">,</span> <span class="dl">'</span><span class="s1">voiture</span><span class="dl">'</span><span class="p">,</span> <span class="p">...</span><span class="nx">legumes</span><span class="p">]</span>
 </code></pre></div></div>
 
 <p>Permet aussi de manipuler des objets</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const obj1 = {
-  a: 1,
-  b: 2,
-};
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="na">b</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="p">};</span>
 
-const obj2 = {
-  ...obj1,
-  c: 3,
-}
+<span class="kd">const</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span><span class="nx">obj1</span><span class="p">,</span>
+  <span class="na">c</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+<span class="p">}</span>
 
-console.log(obj1); // { a: 1, b: 2 }
-console.log(obj2;) // { a: 1, b: 2, c: 3 }
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj1</span><span class="p">);</span> <span class="c1">// { a: 1, b: 2 }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj2</span><span class="p">;)</span> <span class="c1">// { a: 1, b: 2, c: 3 }</span>
 </code></pre></div></div>
 
 <h3 id="rest-parameter">Rest parameter</h3>
 <p>Permet de stocker une liste indéfinies de valeurs sous forme de tableau. Il “ramasse les restes” en paamètres pour une fonction, ou récupère les valeurs finales d’un tableau.</p>
 
 <p>Exemple pour un tableau:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const [a, b, ...c] = [10, 20, 30, 40, 50];
-console.log(a); // 10
-console.log(b); // 20
-console.log(c); // [30, 40, 50]
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="p">...</span><span class="nx">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// 10</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// 20</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span> <span class="c1">// [30, 40, 50]</span>
 </code></pre></div></div>
 <p>Exemple avec les paramètres d’une fonction:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function logArgs(...args) {
-   console.log(args)
-}
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">logArgs</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span>
+<span class="p">}</span>
 
-logArgs('coucou', 3, 'Bob') // args == ['coucou', 3, 'Bob']
+<span class="nx">logArgs</span><span class="p">(</span><span class="dl">'</span><span class="s1">coucou</span><span class="dl">'</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Bob</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// args == ['coucou', 3, 'Bob']</span>
 </code></pre></div></div>
 
 

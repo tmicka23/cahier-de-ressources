@@ -7,7 +7,7 @@ Rappel des spécificités de ES6+ pour JavaScript.
 La création de classe permet de simplement créer de nouvelles instances (= nouvel Objet) à partir de cette classe et grâce à son constructor. On peut créer aussi une nouvelle classe à partir de cette classe, qui contient tous les attributs et méthodes de la classe parente. On peut lui définir de nouvelles méthodes ou nouveaux attributs ou surcharger des méthodes existantes.
 
 Création d'une classe
-```
+```javascript
 class Person {
    constructor(name) {
        this.name = name;
@@ -19,13 +19,13 @@ class Person {
 ```
 
 Création d'nue nouvelle instance à partir de la classe Person avec appel de la méthode définie dans Person
-```
+```javascript
 const pedro = new Person("Pedro");
 pedro.sayHello();
 ```
 
 Création d'une classe qui hérite de Person, et surcharge ses méthodes
-```
+```javascript
 class Students extends Person {
   constructor (name, school) {
     // Calls the Person constructor
@@ -49,7 +49,7 @@ class Students extends Person {
 Elles permettent d'alléger l'écriture des fonctions.
 
 Déclaration classique
-```
+```javascript
 function nameFunction (params) {
   // votre code ici
   return (optionnel, interrompt l'execution de la fonction)
@@ -57,7 +57,7 @@ function nameFunction (params) {
 ```
 
 Ecritures des fonctions flechées
-```
+```javascript
 // écriture basique
 (param1, param2) => { /* bloc */ }
 
@@ -80,13 +80,13 @@ param1 => { /* bloc */ }
 La syntaxe de décomposition permet d’affecter des propriétés d’un tableau ou d’un objet à des variables en utilisant une syntaxe semblable aux littéraux de tableaux ou aux littéraux objets.
 
 Par exemple, sans l'affectation par décompostion, accéder aux élément d'un tableau se ferait de la manière suivante:
-```
+```javascript
 const premier = unTableau[0];
 const deuxième = unTableau[1];
 const troisième = unTableau[2];
 ```
 Avec la syntaxe de décomposition cela se fait de la manière suivante:
-```
+```javascript
 const [premier, deuxième, troisième] = unTableau;
 ```
 
@@ -94,7 +94,7 @@ const [premier, deuxième, troisième] = unTableau;
 Le spread operator sert à éclater un tableau (ou tout autre itérable) en une liste finie de valeurs.
 
 Exemple
-```
+```javascript
 let args = ['var 1', 'var 2', 'var 1']
 
 console.log(...args)
@@ -102,7 +102,7 @@ console.log(...args)
 ```
 
 Utile par exemple pour la concaténations de tableaux:
-```
+```javascript
 let fruits = ['pomme', 'poire', 'abricot']
 let legumes = ['salade', 'asperge']
 
@@ -112,7 +112,7 @@ let mots = ['automne', 'hiver', ...fruits, 'voiture', ...legumes]
 ```
 
 Permet aussi de manipuler des objets
-```
+```javascript
 const obj1 = {
   a: 1,
   b: 2,
@@ -131,14 +131,14 @@ console.log(obj2;) // { a: 1, b: 2, c: 3 }
 Permet de stocker une liste indéfinies de valeurs sous forme de tableau. Il "ramasse les restes" en paamètres pour une fonction, ou récupère les valeurs finales d'un tableau.
 
 Exemple pour un tableau:
-```
+```javascript
 const [a, b, ...c] = [10, 20, 30, 40, 50];
 console.log(a); // 10
 console.log(b); // 20
 console.log(c); // [30, 40, 50]
 ```
 Exemple avec les paramètres d'une fonction:
-```
+```javascript
 function logArgs(...args) {
    console.log(args)
 }
