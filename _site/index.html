@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=b44d5fd4b78ebe7e374b6f547cacb504de8da829">
+    <link rel="stylesheet" href="/assets/css/style.css?v=4f893ba16de34064b53489c55db59644a2e64286">
     <style media="screen">
       nav.navbar li {
         list-style: none;
@@ -39,6 +39,17 @@
         padding-left: 0;
         display: flex;
         justify-content: center;
+        background-color: rgb(44, 67, 77);
+        border-radius: 4px;
+        box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.5);
+      }
+
+      @media only screen and (max-width: 900px){
+        nav.navbar li a {
+          margin: 0 8px;
+          font-size: 20px;
+          font-weight: 500;
+        }
       }
     </style>
   </head>
@@ -89,18 +100,20 @@
 
 <p>Si vous constater une erreur, ouvrez une issue et détailler au mieux le problème, moi ou l’un des contributeur nous feront un plaisir de la corriger.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone https://github.com/AmelieChevalier/cahier-de-ressources.git
- git co -b travailPerso
- cd css
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone https://github.com/AmelieChevalier/cahier-de-ressources.git
+ git co <span class="nt">-b</span> travailPerso
+ <span class="nb">cd </span>css
  git add css.md
- git commit -m "test Amelie on css"
+ git commit <span class="nt">-m</span> <span class="s2">"test Amelie on css"</span>
  git push origin travailPerso
  git status
  git checkout master
  git remote add upstream https://github.com/tmicka23/cahier-de-ressources.git
- git remote -v
+ git remote <span class="nt">-v</span>
  git pull upstream master
 </code></pre></div></div>
+
+<p><a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf">Cheat sheet Markdown</a></p>
 
 <h3 id="comment-organiser-vos-ressources-">Comment Organiser vos ressources ?</h3>
 <p><a href="/wip.html">Voir cette page</a></p>

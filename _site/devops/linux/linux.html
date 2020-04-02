@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>cahier-de-ressources | Il s’agit d’un cahier contenant les meilleurs ressources de la communauté pour aider les débutants à apprendre.</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="cahier-de-ressources" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Il s’agit d’un cahier contenant les meilleurs ressources de la communauté pour aider les débutants à apprendre." />
+<meta property="og:description" content="Il s’agit d’un cahier contenant les meilleurs ressources de la communauté pour aider les débutants à apprendre." />
+<link rel="canonical" href="http://localhost:4000/devops/linux/linux.html" />
+<meta property="og:url" content="http://localhost:4000/devops/linux/linux.html" />
+<meta property="og:site_name" content="cahier-de-ressources" />
+<script type="application/ld+json">
+{"description":"Il s’agit d’un cahier contenant les meilleurs ressources de la communauté pour aider les débutants à apprendre.","headline":"cahier-de-ressources","@type":"WebPage","url":"http://localhost:4000/devops/linux/linux.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=4f893ba16de34064b53489c55db59644a2e64286">
+    <style media="screen">
+      nav.navbar li {
+        list-style: none;
+      }
+
+      nav.navbar li a {
+        color: white;
+        margin: 0 24px;
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      nav.navbar ul {
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(44, 67, 77);
+        border-radius: 4px;
+        box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.5);
+      }
+
+      @media only screen and (max-width: 900px){
+        nav.navbar li a {
+          margin: 0 8px;
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">cahier-de-ressources</h1>
+      <h2 class="project-tagline">Il s'agit d'un cahier contenant les meilleurs ressources de la communauté pour aider les débutants à apprendre.</h2>
+      
+        <a href="https://github.com/tmicka23/cahier-de-ressources" class="btn">View on GitHub</a>
+      
+      
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="https://tmicka23.github.io/cahier-de-ressources/">\ Accueil</a></li>
+          <li><a href="https://tmicka23.github.io/cahier-de-ressources/cahier.html">\ Liste des technologies</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <table>
+  <tbody>
+    <tr>
+      <td><strong><a href="/README.md">Accueil</a></strong></td>
+      <td><strong><a href="/cahier.md">Liste des technologies</a></strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="unix--linux">UNIX / LINUX</h1>
+
+<h2 id="cest-quoi-">C’est quoi ?</h2>
+
+<p>Linux est un système d’exploitation (Operating System : OS) qui a la particularité d’être <strong>libre</strong>, c’est-à-dire que son code source est <strong>ouvert</strong> : tout le monde peut le consulter. L’environnement UNIX constitue un élément important du développement d’internet.</p>
+
+<h2 id="commandes-de-base">Commandes de base</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">cd</code> : Changer de répertoire
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ..
+<span class="nv">$ </span><span class="nb">cd </span>Documents/Dossier/
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">ls</code> : Lister les fichiers dans un répertoire</li>
+  <li><code class="language-plaintext highlighter-rouge">ls -l</code> : Afficher les détails des fichiers</li>
+  <li><code class="language-plaintext highlighter-rouge">ls -a</code> : Afficher les fichiers cachés / qui commencent par un point
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>Documents/
+<span class="nv">$ </span><span class="nb">ls
+</span>Dossier
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">pwd</code>: Afficher le repertoire actuel
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>Documents/
+<span class="nv">$ </span><span class="nb">pwd</span>
+/home/utilisateur/Document
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">man [commande]</code> : Afficher la documentation d’une commande. RTFM !!</li>
+  <li><code class="language-plaintext highlighter-rouge">mkdir</code> : Créer un dossier
+-<code class="language-plaintext highlighter-rouge">mkdir -p</code>: Créer un dossier et sous-dossier</li>
+  <li><code class="language-plaintext highlighter-rouge">rmdir</code> : Supprimer un dossier vide</li>
+  <li><code class="language-plaintext highlighter-rouge">rmdir -r</code>: Supprimer un dossier récursivement (avec tous les dossiers et fichiers qu’il contient</li>
+  <li><code class="language-plaintext highlighter-rouge">mv </code> : Déplacer un fichier (peut aussi servir à renommer)
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mv</span> /chemin/source/fichier /chemin/destination/fichier
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">touch</code>: Créer un fichier
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">touch </span>nom_du_fichier.txt
+<span class="nv">$ </span><span class="nb">touch</span> /chemin/source/nom_du_fichier.txt
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">cp</code> : Copier un fichier
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp </span>fichier_a_copier.txt /chemin/source/
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">&gt;</code>: stocker le résultat d’une commande dans un fichier spécifié par la suite
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"Je suis moisi"</span> <span class="o">&gt;</span> vieuxtacos.txt
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&gt;&gt;</code>: stocker le résultat d’une commande mais en ajoutant du contenu</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">cat</code>: Afficher le contenu d’un fichier texte en intégralité</li>
+  <li><code class="language-plaintext highlighter-rouge">wc</code> : Compter les lignes, les mots et les caractères
+```shell
+$ wc -l languages.txt
+50</li>
+</ul>
+
+<p>$ wc languages.text</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- `sort` : Classer par ordre alphabétique
+```shell
+$ sort languages.txt
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">grep</code> : Rechercher une chaine de caractère dans un fichier (attention aux majuscules !!)
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"France,2019,PHP"</span> fichier.csv
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">history</code> : Afficher l’historique du terminal</li>
+  <li><code class="language-plaintext highlighter-rouge">clear</code> : Effacer le contenu du terminal</li>
+  <li><code class="language-plaintext highlighter-rouge">head</code> : Afficher les premières lignes d’un fichier</li>
+  <li><code class="language-plaintext highlighter-rouge">tail</code> : Afficher les dernières lignes d’un fichier</li>
+  <li><code class="language-plaintext highlighter-rouge">find</code> : Rechercher un fichier ou répertoire
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>find /chemin/ <span class="nt">-type</span> <span class="o">[</span>f|d] <span class="nt">-iname</span> <span class="s2">"pattern"</span> où <span class="nv">f</span><span class="o">=</span>file et <span class="nv">d</span><span class="o">=</span>répertoire, pattern <span class="o">=</span> le schéma de recherche <span class="o">=&gt;</span> par exemple : <span class="k">*</span>data<span class="k">*</span> pour tous les fichiers contenant la suite de caractère data.
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="la-commande-sudo">La commande sudo</h2>
+<p>Exécuter une ligne de commande en mode super utilisateur</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo</span> &lt;commande&gt; : Exécuter la commande suivante en tant qu<span class="s1">'admin.
+</span></code></pre></div></div>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/tmicka23/cahier-de-ressources">cahier-de-ressources</a> is maintained by <a href="https://github.com/tmicka23">tmicka23</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
