@@ -65,7 +65,7 @@ Il est possible de rédiger du CSS directement dans un fichier HTML à l'aide de
 
 Exemple :
 
-```css
+```html
 <div style="color:blue;font-size:28px;">Lorem Ipsum</div>
 ```
 
@@ -85,7 +85,7 @@ Pour ce faire, utiliser la balise ```<link>``` de la manière suivante :
 
 Bien penser à spécifier correctement le chemin vers le fichier CSS. S'il est dans le même dossier que le fichier HTML, il s'uffit d'écrire son nom. S'il se trouve dans un dossier enfant, spécifier comme suit : 
 
-```css
+```html
 <link rel="stylesheet" type="text/css" href="/mon-dossier/style.css">
 ```
 
