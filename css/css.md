@@ -30,15 +30,36 @@
     * [Compass](preprocesseurs/compass.md)
     * [Stylus](preprocesseurs/stylus.md)
 * **Outils**
-	* Check my CSS(http://csslint.net/)
+	* [Check my CSS](http://csslint.net/)
 
 # Cheat Sheet
 
-## Appeler un fichier CSS
+## Sommaire
+
+* [Appeler un fichier CSS](#appeler-un-fichier-css)
+	* [Inline](#inline) **à proscrire**
+	* [Entre balises ```<style>```](#entre-des-balises-styles) **à proscrire**
+	* [Depuis un fichier CSS externe](#depuis-un-fichier-css-externe)
+* [Les sélecteurs CSS](#les-selecteurs-css)
+	* [Balises](#les-balises)
+	* [Classes](#les-classes)
+	* [ID](#les-id)
+* [Les pseudos-classes](#les-pseudos-classes)
+	* [Sélectionner un élément](#selectionner-un-element)
+	* [styliser un état](#styliser-un-etat)
+* [Flexbox](#flexbox)
+	* [Les propriétés Flexbox](#les-proprietes-flexbox)
+	* [Flex-direction](#flex-direction)
+	* [Flex-wrap](#flex-wrap)
+	* [Flex-flow](#flex-flow)
+	* [Justify-content](#justify-content)
+	* [Align-items](#align-items)
+
+### Appeler un fichier CSS
 
 3 façons de faire : 
 
-* **Inline** (à proscrire)
+#### **Inline**
 
 Il est possible de rédiger du CSS directement dans un fichier HTML à l'aide de l'attribut style, placé dans une balise HTML.
 
@@ -46,11 +67,11 @@ Exemple :
 
 ```<div style="color:blue;font-size:28px;">Lorem Ipsum</div>```
 
-* **Entre des balises ```<style>```** (à proscrire)
+#### **Entre des balises ```<style>```**
 
 Placée dans le ```<head>```, la balise ```<style>``` permet également d'intégrer du CSS dans un fichier HTML
 
-* **Dans un fichier CSS externe**
+#### **Depuis un fichier CSS externe**
 
 Il est fortement conseillé de rédiger son CSS dans un fichier séparé. Une fois fait, il devra être appelé dans le head du document html afin de l'appliquer à la page.
 
@@ -66,14 +87,14 @@ Bien penser à spécifier correctement le chemin vers le fichier CSS. S'il est d
 <link rel="stylesheet" type="text/css" href="/mon-dossier/style.css">
 ```
 
-## Les sélecteurs CSS
+### Les sélecteurs CSS
 
 Il existe en CSS trois moyens de définir un style à un élément : 
 * Les balises
 * Les classes
 * Les ID
 
-### Les balises
+#### Les balises
 
 Il est possible d'assigner un style à des balises en spécifiant simplement leur nom : 
 
@@ -85,7 +106,7 @@ h1 {
 
 Dans cet exemple, toutes les balises ```<h1>``` seront de couleur bleue.
 
-### Les classes
+#### Les classes
 
 Il est possible d'assigner un style à des éléments en fonction de leur classe précisée dans l'attribut ```class="ma-classe"``` en ajoutant un **point** avant le nom de la classe : 
 
@@ -97,7 +118,7 @@ Il est possible d'assigner un style à des éléments en fonction de leur classe
 
 Dans cet exemple, tous les éléments ayant la classe **ma-classe** auront un background de couleur verte.
 
-### Les ID
+#### Les ID
 
 Il est enfin possible d'appliquer un style à des éléments en fonction de leur identifiant précisé dans l'attribut ```id="mon-id"``` en ajoutant un **dièse** avant le nom de l'identifiant : 
 
@@ -111,19 +132,19 @@ Dans cet exemple, l'élement ayant pour identifiant **mon-id** aura son texte so
 
 
 
-## Flexbox
+### Flexbox
 
-### Les propriétés flexbox
+#### Les propriétés flexbox
 
-* [flex-direction](#flex-direction)
-* [flex-wrap](#flex-wrap)
-* [flex-flow](#flex-flow)
-* [justify-content](#justify-content)
-* [align-items](#align-items)
+* [Flex-direction](#flex-direction)
+* [Flex-wrap](#flex-wrap)
+* [Flex-flow](#flex-flow)
+* [Justify-content](#justify-content)
+* [Align-items](#align-items)
 
-#### Flex-direction
+##### Flex-direction
 
-##### Définition
+###### Définition
 
 La propriété ```flex-direction``` définit la direction dans laquelle le conteneur veut aligner ses éléments enfants
 
@@ -135,9 +156,9 @@ Elle peut accepter 4 valeurs :
 
 [voir sur codepen](https://codepen.io/GCR/pen/poJBwrd?editors=1100)
 
-#### Flex-wrap
+##### Flex-wrap
 
-##### Définition
+###### Définition
 
 La propriété ```flex-wrap``` définit si le parent alignera ses enfants sur une ou plusieurs lignes.
 
@@ -148,9 +169,23 @@ Elle peut accepter 3 valeurs :
 
 [voir sur codepen](https://codepen.io/GCR/pen/QWbPgJa)
 
-#### Justify-content
+##### Flex-flow
 
-##### Définition
+###### Définition
+
+La propriété ```flex-flow``` permet de paramètrer d'un seul coup les propriétés ```flex-direction``` et ```flex-wrap```. 
+
+Elle s'utilise comme suit : 
+
+```
+flex-flow: center nowrap;
+```
+
+La première valeur renseignée correspond à ```flex-direction``` et la seconde à ```flex-wrap```.
+
+##### Justify-content
+
+###### Définition
 
 La propriété ```justify-content``` définit l'alignement des enfants le long de l'axe principal.
 
@@ -163,9 +198,9 @@ Elle peut accepter 5 valeurs :
 
 [voir sur codepen](https://codepen.io/GCR/pen/poJBwQV)
 
-#### Align-items
+##### Align-items
 
-##### Définition
+###### Définition
 
 La propriété ```align-items``` définit l'alignement des enfants le long de l'axe secondaire. 
 Si ```flex-direction:row``` est utilisée, ```align-items``` alignera les enfants verticalement.
