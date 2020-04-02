@@ -6,7 +6,7 @@ son code source est ouvert : tout le monde peut le consulter. L’environnement 
 important du développement d’internet.
 
 Commandes de base
-- cd : Changer de répertoire
+- ```cd : Changer de répertoire
 
 Exemples:
   $ cd ..
