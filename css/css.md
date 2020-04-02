@@ -79,7 +79,7 @@ Il est fortement conseillé de rédiger son CSS dans un fichier séparé. Une fo
 
 Pour ce faire, utiliser la balise ```<link>``` de la manière suivante : 
 
-```
+```html
 <link rel="stylesheet" type="text/css" href="style.css">
 ```
 
