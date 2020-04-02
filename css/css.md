@@ -36,10 +36,10 @@
 ### Les propriétés flexbox
 
 * [flex-direction](####-Flex-direction)
-* [flex-wrap](#flex-wrap)
-* [flex-flow](#flex-flow)
-* [justify-content](#justify-content)
-* [align-items](#align-items)
+* [flex-wrap](####-Flex-wrap)
+* [flex-flow](####-Flex-flow)
+* [justify-content](####-Justify-content)
+* [align-items](####-Align-items)
 
 #### Flex-direction
 
@@ -48,9 +48,54 @@
 La propriété ```flex-direction``` définit la direction dans laquelle le conteneur veut aligner ses éléments enfants
 
 Elle peut accepter 4 valeurs : 
-* ```flex-direction: row;``` (par défaut)
-* ```flex-direction: row-reverse;```
-* ```flex-direction: column;```
-* ```flex-direction: column-reverse;```
+* ```flex-direction: row;``` (par défaut) : les enfants s'aligneront en lignes
+* ```flex-direction: row-reverse;``` : les enfants s'aligneront en lignes inversées
+* ```flex-direction: column;``` : les enfants s'aligneront en colonnes
+* ```flex-direction: column-reverse;``` : les enfants s'aligneront en colonnes inversées
 
 [voir sur codepen](https://codepen.io/GCR/pen/poJBwrd?editors=1100)
+
+#### Flex-wrap
+
+##### Définition
+
+La propriété ```flex-wrap``` définit si le parent alignera ses enfants sur une ou plusieurs lignes.
+
+Elle peut accepter 3 valeurs : 
+* ```flex-wrap: nowrap;``` (par défaut) : les enfants s'aligneront sur une seule ligne et peuvent donc déborder du parent
+* ```flex-direction: wrap;``` : les enfants s'aligneront sur plusieurs lignes, de gauche à droite avec saut de ligne en cas de débordement 
+* ```flex-direction: wrap-reverse;``` : les enfants s'ligneront sur plusieurs lignes de droite à gauche avec saut de ligne en cas de débordement
+
+[voir sur codepen](https://codepen.io/GCR/pen/QWbPgJa)
+
+#### Justify-content
+
+##### Définition
+
+La propriété ```justify-content``` définit l'alignement des enfants le long de l'axe principal.
+
+Elle peut accepter 5 valeurs : 
+* ```justify-content: flex-start;``` (par défaut) : les enfants sont regroupés en début de ligne
+* ```justify-content: flex-end;``` : les enfants sont regroupés en fin de ligne
+* ```justify-content: center;``` : les enfants sont centrés le long de la ligne
+* ```justify-content: space-between;``` : les enfants sont répartis sur la ligne. Le premier enfant est donc collé contre le début de son parent et le dernier enfant contre la fin de son parent.
+* ```justify-content: space-around;``` : les enfants sont repartis sur la ligne avec les mêmes marges autour de chacun
+
+[voir sur codepen](https://codepen.io/GCR/pen/poJBwQV)
+
+#### Align-items
+
+##### Définition
+
+La propriété ```align-items``` définit l'alignement des enfants le long de l'axe secondaire. 
+Si ```flex-direction:row``` est utilisée, ```align-items``` alignera les enfants verticalement.
+Si ```flex-direction:column``` est utilisée, ```align-items``` alignera les enfants horizontalement. 
+
+Elle peut accepter 5 valeurs : 
+* ```align-items: flex-start;``` : les enfants sont regroupés au début de l'axe secondaire
+* ```align-items: flex-end;``` : les enfants sont regroupés à la fin de l'axe secondaire
+* ```align-items: center;``` : les enfants sont centrés sur l'axe secondaire
+* ```align-items: baseline;``` : les enfants sont répartis sur l'axe secondaire. Le premier enfant est donc collé contre le début de son parent et le dernier enfant contre la fin de son parent.
+* ```align-items: stretch;``` (par défaut) : les enfants sont étirés jusqu'à remplir le parent (sauf si les dimensions de l'axe correspondant des enfants sont précisées)
+
+[voir sur codepen](https://codepen.io/GCR/pen/NWqmvPy)
