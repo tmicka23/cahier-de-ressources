@@ -81,13 +81,13 @@ La syntaxe de décomposition permet d’affecter des propriétés d’un tableau
 
 Par exemple, sans l'affectation par décompostion, accéder aux élément d'un tableau se ferait de la manière suivante:
 ```
-var premier = unTableau[0];
-var deuxième = unTableau[1];
-var troisième = unTableau[2];
+const premier = unTableau[0];
+const deuxième = unTableau[1];
+const troisième = unTableau[2];
 ```
 Avec la syntaxe de décomposition cela se fait de la manière suivante:
 ```
-var [premier, deuxième, troisième] = unTableau;
+const [premier, deuxième, troisième] = unTableau;
 ```
 
 ### Spread Operator
