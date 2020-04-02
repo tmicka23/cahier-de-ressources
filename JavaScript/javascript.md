@@ -91,3 +91,57 @@ var [premier, deuxième, troisième] = unTableau;
 ```
 
 ### Spread Operator
+Le spread operator sert à éclater un tableau (ou tout autre itérable) en une liste finie de valeurs. 
+
+Exemple
+```
+let args = ['var 1', 'var 2', 'var 1']
+
+console.log(...args)
+// == console.log('var 1', 'var 2', 'var 1')
+```
+
+Utile par exemple pour la concaténations de tableaux: 
+```
+let fruits = ['pomme', 'poire', 'abricot']
+let legumes = ['salade', 'asperge']
+
+// je veux obtenir ['automne', 'hiver', 'pomme', 'poire', 'abricot', 'voiture', 'salade', 'asperge']
+
+let mots = ['automne', 'hiver', ...fruits, 'voiture', ...legumes]
+```
+
+Permet aussi de manipuler des objets
+```
+const obj1 = {
+  a: 1,
+  b: 2,
+};
+
+const obj2 = {
+  ...obj1,
+  c: 3,
+}
+
+console.log(obj1); // { a: 1, b: 2 }
+console.log(obj2;) // { a: 1, b: 2, c: 3 }
+```
+
+### Rest parameter
+Permet de stocker une liste indéfinies de valeurs sous forme de tableau. Il "ramasse les restes" en paamètres pour une fonction, ou récupère les valeurs finales d'un tableau.
+
+Exemple pour un tableau:
+```
+const [a, b, ...c] = [10, 20, 30, 40, 50];
+console.log(a); // 10
+console.log(b); // 20
+console.log(c); // [30, 40, 50]
+```
+Exemple avec les paramètres d'une fonction:
+```
+function logArgs(...args) {
+   console.log(args)
+}
+
+logArgs('coucou', 3, 'Bob') // args == ['coucou', 3, 'Bob']
+```
