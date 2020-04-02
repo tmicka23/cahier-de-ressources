@@ -29,6 +29,86 @@
     * [Less](preprocesseurs/less.md)
     * [Compass](preprocesseurs/compass.md)
     * [Stylus](preprocesseurs/stylus.md)
+* **Outils**
+	* Check my CSS(http://csslint.net/)
+
+#Cheat Sheet
+
+##Appeler un fichier CSS
+
+3 façons de faire : 
+
+* Inline (à proscrire)
+
+Il est possible de rédiger du CSS directement dans un fichier HTML à l'aide de l'attribut style, placé dans une balise HTML.
+
+Exemple :
+
+```<div style="color:blue;font-size:28px;">Lorem Ipsum</div>```
+
+* Entre des balises ```<style>``` (à proscrire)
+
+Placée dans le ```<head>```, la balise ```<style>``` permet également d'intégrer du CSS dans un fichier HTML
+
+* Dans un fichier CSS externe
+
+Il est fortement conseillé de rédiger son CSS dans un fichier séparé. Une fois fait, il devra être appelé dans le head du document html afin de l'appliquer à la page.
+
+Pour ce faire, utiliser la balise ```<link>``` de la manière suivante : 
+
+```
+<link rel="stylesheet" type="text/css" href="style.css">
+```
+
+Bien penser à spécifier correctement le chemin vers le fichier CSS. S'il est dans le même dossier que le fichier HTML, il s'uffit d'écrire son nom. S'il se trouve dans un dossier enfant, spécifier comme suit : 
+
+```
+<link rel="stylesheet" type="text/css" href="/mon-dossier/style.css">
+```
+
+##Les sélecteurs CSS
+
+Il existe en CSS trois moyens de définir un style à un élément : 
+* Les balises
+* Les classes
+* Les ID
+
+###Les balises
+
+Il est possible d'assigner un style à des balises en spécifiant simplement leur nom : 
+
+```
+h1 {
+	color:blue;
+}
+```
+
+Dans cet exemple, toutes les balises ```<h1>``` seront de couleur bleue.
+
+###Les classes
+
+Il est possible d'assigner un style à des éléments en fonction de leur classe précisée dans l'attribut ```class="ma-classe"``` en ajoutant un **point** avant le nom de la classe : 
+
+```
+.ma-classe {
+	background-color:green;
+}
+```
+
+Dans cet exemple, tous les éléments ayant la classe **ma-classe** auront un background de couleur verte.
+
+###Les ID
+
+Il est enfin possible d'appliquer un style à des éléments en fonction de leur identifiant précisé dans l'attribut ```id="mon-id"``` en ajoutant un **dièse** avant le nom de l'identifiant : 
+
+```
+#mon-id {
+	text-decoration:underline;
+}
+```
+
+Dans cet exemple, l'élement ayant pour identifiant **mon-id** aura son texte souligné.
+
 
 
 ## Flexbox
