@@ -65,7 +65,9 @@ Il est possible de rédiger du CSS directement dans un fichier HTML à l'aide de
 
 Exemple :
 
-```<div style="color:blue;font-size:28px;">Lorem Ipsum</div>```
+```css
+<div style="color:blue;font-size:28px;">Lorem Ipsum</div>
+```
 
 #### **Entre des balises ```<style>```**
 
@@ -83,7 +85,7 @@ Pour ce faire, utiliser la balise ```<link>``` de la manière suivante :
 
 Bien penser à spécifier correctement le chemin vers le fichier CSS. S'il est dans le même dossier que le fichier HTML, il s'uffit d'écrire son nom. S'il se trouve dans un dossier enfant, spécifier comme suit : 
 
-```
+```css
 <link rel="stylesheet" type="text/css" href="/mon-dossier/style.css">
 ```
 
@@ -98,7 +100,7 @@ Il existe en CSS trois moyens de définir un style à un élément :
 
 Il est possible d'assigner un style à des balises en spécifiant simplement leur nom : 
 
-```
+```css
 h1 {
 	color:blue;
 }
@@ -110,7 +112,7 @@ Dans cet exemple, toutes les balises ```<h1>``` seront de couleur bleue.
 
 Il est possible d'assigner un style à des éléments en fonction de leur classe précisée dans l'attribut ```class="ma-classe"``` en ajoutant un **point** avant le nom de la classe : 
 
-```
+```css
 .ma-classe {
 	background-color:green;
 }
@@ -122,7 +124,7 @@ Dans cet exemple, tous les éléments ayant la classe **ma-classe** auront un ba
 
 Il est enfin possible d'appliquer un style à des éléments en fonction de leur identifiant précisé dans l'attribut ```id="mon-id"``` en ajoutant un **dièse** avant le nom de l'identifiant : 
 
-```
+```css
 #mon-id {
 	text-decoration:underline;
 }
@@ -149,7 +151,7 @@ Il est possible de styliser des états particuliers grâce aux pseudos classes.
 
 On peut ainsi définir un style au survol de la souris grâce à la pseudo classe :hover comme ceci :
 
-```
+```css
 a {
 	opacity:0.8;
 }
@@ -211,7 +213,7 @@ La propriété ```flex-flow``` permet de paramètrer d'un seul coup les proprié
 
 Elle s'utilise comme suit : 
 
-```
+```css
 flex-flow: center nowrap;
 ```
 
