@@ -4,7 +4,7 @@
 
 * [HTML](html/html.md)
 * [CSS](css/css.md)
-* [JavaScript](javascript/javascript.md)
+* [JavaScript](Javascript/javascript.md)
 * [PHP](php/php.md)
 * [Devops](devops/devops.md)
 * [WebDesign](webdesign/webdesign.md)
