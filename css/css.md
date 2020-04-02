@@ -1,6 +1,6 @@
-**[Accueil](../README.md)** | **[Liste des technologies](../cahier.md)**
 
-# Liste des ressources sur CSS 
+
+# Liste des ressources sur CSS
 
 ### [Documentation Officielle](https://developer.mozilla.org/fr/docs/Web/CSS)
 
@@ -29,6 +29,7 @@
     * [Less](preprocesseurs/less.md)
     * [Compass](preprocesseurs/compass.md)
     * [Stylus](preprocesseurs/stylus.md)
+
 * **Outils**
 	* [Check my CSS](http://csslint.net/)
 
@@ -250,3 +251,4 @@ Elle peut accepter 5 valeurs :
 * ```align-items: stretch;``` (par défaut) : les enfants sont étirés jusqu'à remplir le parent (sauf si les dimensions de l'axe correspondant des enfants sont précisées)
 
 [voir sur codepen](https://codepen.io/GCR/pen/NWqmvPy)
+
