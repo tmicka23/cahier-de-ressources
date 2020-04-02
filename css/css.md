@@ -115,11 +115,11 @@ Dans cet exemple, l'élement ayant pour identifiant **mon-id** aura son texte so
 
 ### Les propriétés flexbox
 
-* [flex-direction](#-Flex-direction)
-* [flex-wrap](#-Flex-wrap)
-* [flex-flow](#-Flex-flow)
-* [justify-content](#-Justify-content)
-* [align-items](#-Align-items)
+* [flex-direction](#flex-direction)
+* [flex-wrap](#flex-wrap)
+* [flex-flow](#flex-flow)
+* [justify-content](#justify-content)
+* [align-items](#align-items)
 
 #### Flex-direction
 
