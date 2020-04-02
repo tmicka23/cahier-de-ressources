@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>ES6 + | cahier-de-ressources</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="ES6 +" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Il s’agit d’un cahier contenant les meilleurs ressources de la communauté pour aider les débutants à apprendre." />
+<meta property="og:description" content="Il s’agit d’un cahier contenant les meilleurs ressources de la communauté pour aider les débutants à apprendre." />
+<link rel="canonical" href="http://localhost:4000/javascript/javascript.html" />
+<meta property="og:url" content="http://localhost:4000/javascript/javascript.html" />
+<meta property="og:site_name" content="cahier-de-ressources" />
+<script type="application/ld+json">
+{"description":"Il s’agit d’un cahier contenant les meilleurs ressources de la communauté pour aider les débutants à apprendre.","headline":"ES6 +","@type":"WebPage","url":"http://localhost:4000/javascript/javascript.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=b44d5fd4b78ebe7e374b6f547cacb504de8da829">
+    <style media="screen">
+      nav.navbar li {
+        list-style: none;
+      }
+
+      nav.navbar li a {
+        color: white;
+        margin: 0 24px;
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      nav.navbar ul {
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ES6 +</h1>
+      <h2 class="project-tagline">Il s'agit d'un cahier contenant les meilleurs ressources de la communauté pour aider les débutants à apprendre.</h2>
+      
+        <a href="https://github.com/tmicka23/cahier-de-ressources" class="btn">View on GitHub</a>
+      
+      
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">\ Accueil</a></li>
+          <li><a href="/cahier.html">\ Liste des technologies</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      
+<h1 id="es6-">ES6 +</h1>
+<p>Rappel des spécificités de ES6+ pour JavaScript.</p>
+
+<h3 id="les-classes">Les Classes</h3>
+<p>La création de classe permet de simplement créer de nouvelles instances (= nouvel Objet) à partir de cette classe et grâce à son constructor. On peut créer aussi une nouvelle classe à partir de cette classe, qui contient tous les attributs et méthodes de la classe parente. On peut lui définir de nouvelles méthodes ou nouveaux attributs ou surcharger des méthodes existantes.</p>
+
+<p>Création d’une classe</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Person {
+   constructor(name) {
+       this.name = name;
+   }
+   sayHello() {
+       console.log(`Hello, my name is ${this.name}`)
+   }
+}
+</code></pre></div></div>
+
+<p>Création d’nue nouvelle instance à partir de la classe Person avec appel de la méthode définie dans Person</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const pedro = new Person("Pedro");
+pedro.sayHello();
+</code></pre></div></div>
+
+<p>Création d’une classe qui hérite de Person, et surcharge ses méthodes</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Students extends Person {
+  constructor (name, school) {
+    // Calls the Person constructor
+    super(name);
+    this.school = school;
+  }
+
+  //surcharge la méthode de Person
+  sayHello() {
+    console.log(`Hello, my name is ${this.name} and I am a student !`);
+  }
+
+  displaySchool() {
+    console.log(`My school is ${this.school}`);
+  }
+
+}
+</code></pre></div></div>
+
+<h3 id="les-fonction-flechées">Les fonction flechées</h3>
+<p>Elles permettent d’alléger l’écriture des fonctions.</p>
+
+<p>Déclaration classique</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function nameFunction (params) {
+  // votre code ici
+  return (optionnel, interrompt l'execution de la fonction)
+}
+</code></pre></div></div>
+
+<p>Ecritures des fonctions flechées</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// écriture basique
+(param1, param2) =&gt; { /* bloc */ }
+
+// Parenthèses non nécessaires si un seul argument
+param1 =&gt; { /* bloc */ }
+
+// Si aucun paramètres, parenthèses vides
+() =&gt; { /* bloc */ }
+
+// “return” implicite si une seule ligne d’instruction
+(a, b) =&gt; a + b;
+// équivalent à
+(a, b) =&gt; { return a + b }
+
+// retourner un objet avec un return implicite :
+() =&gt; ({prop1: "value1", prop2: "value2"})
+</code></pre></div></div>
+
+<h3 id="syntaxe-de-décomposition">Syntaxe de décomposition</h3>
+<p>La syntaxe de décomposition permet d’affecter des propriétés d’un tableau ou d’un objet à des variables en utilisant une syntaxe semblable aux littéraux de tableaux ou aux littéraux objets.</p>
+
+<p>Par exemple, sans l’affectation par décompostion, accéder aux élément d’un tableau se ferait de la manière suivante:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const premier = unTableau[0];
+const deuxième = unTableau[1];
+const troisième = unTableau[2];
+</code></pre></div></div>
+<p>Avec la syntaxe de décomposition cela se fait de la manière suivante:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const [premier, deuxième, troisième] = unTableau;
+</code></pre></div></div>
+
+<h3 id="spread-operator">Spread Operator</h3>
+<p>Le spread operator sert à éclater un tableau (ou tout autre itérable) en une liste finie de valeurs.</p>
+
+<p>Exemple</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let args = ['var 1', 'var 2', 'var 1']
+
+console.log(...args)
+// == console.log('var 1', 'var 2', 'var 1')
+</code></pre></div></div>
+
+<p>Utile par exemple pour la concaténations de tableaux:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let fruits = ['pomme', 'poire', 'abricot']
+let legumes = ['salade', 'asperge']
+
+// je veux obtenir ['automne', 'hiver', 'pomme', 'poire', 'abricot', 'voiture', 'salade', 'asperge']
+
+let mots = ['automne', 'hiver', ...fruits, 'voiture', ...legumes]
+</code></pre></div></div>
+
+<p>Permet aussi de manipuler des objets</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const obj1 = {
+  a: 1,
+  b: 2,
+};
+
+const obj2 = {
+  ...obj1,
+  c: 3,
+}
+
+console.log(obj1); // { a: 1, b: 2 }
+console.log(obj2;) // { a: 1, b: 2, c: 3 }
+</code></pre></div></div>
+
+<h3 id="rest-parameter">Rest parameter</h3>
+<p>Permet de stocker une liste indéfinies de valeurs sous forme de tableau. Il “ramasse les restes” en paamètres pour une fonction, ou récupère les valeurs finales d’un tableau.</p>
+
+<p>Exemple pour un tableau:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const [a, b, ...c] = [10, 20, 30, 40, 50];
+console.log(a); // 10
+console.log(b); // 20
+console.log(c); // [30, 40, 50]
+</code></pre></div></div>
+<p>Exemple avec les paramètres d’une fonction:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function logArgs(...args) {
+   console.log(args)
+}
+
+logArgs('coucou', 3, 'Bob') // args == ['coucou', 3, 'Bob']
+</code></pre></div></div>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/tmicka23/cahier-de-ressources">cahier-de-ressources</a> is maintained by <a href="https://github.com/tmicka23">tmicka23</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
