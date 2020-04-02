@@ -35,13 +35,15 @@
 
 ### Les propriétés flexbox
 
-* [flex-direction](####-flex-direction)
+* [flex-direction](####-Flex-direction)
 * [flex-wrap](#flex-wrap)
 * [flex-flow](#flex-flow)
 * [justify-content](#justify-content)
 * [align-items](#align-items)
 
-#### flex-direction
+#### Flex-direction
+
+##### Définition
 
 La propriété ```flex-direction``` définit la direction dans laquelle le conteneur veut aligner ses éléments enfants
 
@@ -51,83 +53,4 @@ Elle peut accepter 4 valeurs :
 * ```flex-direction: column;```
 * ```flex-direction: column-reverse;```
 
-
-
-
-
-
-### Centrer Horizontalement un enfant dans son parent
-
-**HTML**
-
-```
-<div class="parent">
-	<p class="enfant">
-		Je suis centré horizontalement
-	</p>
-</div>
-```
-
-**CSS**
-
-```
-.parent {
-	width:300px;
-	height:200px;
-	background-color:black;
-	color:white;
-	display:flex;
-	justify-content:center;
-}
-```
-
-### Centrer Verticalement un enfant dans son parent
-
-**HTML**
-
-```
-<div class="parent">
-	<p class="enfant">
-		Je suis centré verticalement
-	</p>
-</div>
-```
-
-**CSS** 
-
-```
-.parent {
-	width:300px;
-	height:200px;
-	background-color:black;
-	color:white;
-	display:flex;
-	align-items:center;
-}
-```
-
-### Centrer Horizontalement et verticalement un enfant dans son parent
-
-**HTML**
-
-```
-<div class="parent">
-	<p class="enfant">
-		Je suis centré horizontalement et verticalement
-	</p>
-</div>
-```
-
-**CSS** 
-
-```
-.parent {
-	width:300px;
-	height:200px;
-	background-color:black;
-	color:white;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-}
-```
+[voir sur codepen](https://codepen.io/GCR/pen/poJBwrd?editors=1100)
