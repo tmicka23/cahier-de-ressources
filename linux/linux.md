@@ -29,7 +29,9 @@ $ pwd
 ```
 - `man [commande]` : Afficher la documentation d'une commande. RTFM !!
 - `mkdir` : Créer un dossier
+-`mkdir -p`: Créer un dossier et sous-dossier
 - `rmdir` : Supprimer un dossier vide
+- `rmdir -r`: Supprimer un dossier récursivement (avec tous les dossiers et fichiers qu'il contient
 - `mv ` : Déplacer un fichier (peut aussi servir à renommer)
 ```shell
 $ mv /chemin/source/fichier /chemin/destination/fichier
@@ -43,11 +45,19 @@ $ touch /chemin/source/nom_du_fichier.txt
 ```shell
 $ cp fichier_a_copier.txt /chemin/source/
 ```
+- `>`: stocker le résultat d'une commande dans un fichier spécifié par la suite
+```shell
+$ echo "Je suis moisi" > vieuxtacos.txt
+```
+- `>>`: stocker le résultat d'une commande mais en ajoutant du contenu
+
 - `cat`: Afficher le contenu d’un fichier texte en intégralité
 - `wc` : Compter les lignes, les mots et les caractères
 ```shell
 $ wc -l languages.txt
 50
+
+$ wc languages.text
 ```
 - `sort` : Classer par ordre alphabétique
 ```shell
