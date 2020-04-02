@@ -33,7 +33,7 @@
 
 ## Flexbox
 
-###Les propriétés flexbox
+### Les propriétés flexbox
 
 * flex-direction
 * flex-wrap
@@ -41,7 +41,7 @@
 * justify-content
 * align-items
 
-####Flex-direction
+#### Flex-direction
 
 La propriété ```flex-direction``` définit la direction dans laquelle le conteneur veut aligner ses éléments enfants
 
@@ -56,9 +56,9 @@ Elle peut accepter 4 valeurs :
 
 
 
-###Centrer Horizontalement un enfant dans son parent
+### Centrer Horizontalement un enfant dans son parent
 
-HTML
+**HTML**
 
 ```
 <div class="parent">
@@ -68,7 +68,7 @@ HTML
 </div>
 ```
 
-CSS 
+**CSS**
 
 ```
 .parent {
@@ -81,9 +81,9 @@ CSS
 }
 ```
 
-###Centrer Verticalement un enfant dans son parent
+### Centrer Verticalement un enfant dans son parent
 
-HTML
+**HTML**
 
 ```
 <div class="parent">
@@ -93,7 +93,7 @@ HTML
 </div>
 ```
 
-CSS 
+**CSS** 
 
 ```
 .parent {
@@ -106,9 +106,9 @@ CSS
 }
 ```
 
-###Centrer Horizontalement et verticalement un enfant dans son parent
+### Centrer Horizontalement et verticalement un enfant dans son parent
 
-HTML
+**HTML**
 
 ```
 <div class="parent">
@@ -118,7 +118,7 @@ HTML
 </div>
 ```
 
-CSS 
+**CSS** 
 
 ```
 .parent {
