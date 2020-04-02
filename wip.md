@@ -1,4 +1,4 @@
-**[Accueil](/README.md)** | **[Liste des technologies](/cahier.md)**
+**[Accueil](README.md)** | **[Liste des technologies](/cahier.md)**
 
 # **Cahier en cours d'élaboration**
 ## *Si vous voulez participer voici comment organiser les ressources :*

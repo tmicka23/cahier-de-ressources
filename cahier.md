@@ -1,4 +1,4 @@
-**[Accueil](/README.md)** | **[Liste des technologies](/cahier.md)**
+**[Accueil](README.md)** | **[Liste des technologies](/cahier.md)**
 
 # Liste des langages/disciplines disponibles
 

@@ -1,4 +1,4 @@
-**[Accueil](/README.md)** | **[Liste des technologies](/cahier.md)**
+**[Accueil](README.md)** | **[Liste des technologies](/cahier.md)**
 
 # ES6 +
 Rappel des spécificités de ES6+ pour JavaScript.
@@ -91,7 +91,7 @@ const [premier, deuxième, troisième] = unTableau;
 ```
 
 ### Spread Operator
-Le spread operator sert à éclater un tableau (ou tout autre itérable) en une liste finie de valeurs. 
+Le spread operator sert à éclater un tableau (ou tout autre itérable) en une liste finie de valeurs.
 
 Exemple
 ```
@@ -101,7 +101,7 @@ console.log(...args)
 // == console.log('var 1', 'var 2', 'var 1')
 ```
 
-Utile par exemple pour la concaténations de tableaux: 
+Utile par exemple pour la concaténations de tableaux:
 ```
 let fruits = ['pomme', 'poire', 'abricot']
 let legumes = ['salade', 'asperge']
