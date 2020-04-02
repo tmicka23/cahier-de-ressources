@@ -36,19 +36,19 @@
 
 ## Sommaire
 
-* [Appeler un fichier CSS](#appeler-un-fichier-css)
+* [Appeler un fichier CSS](#appeler-un-fichier-CSS)
 	* [Inline](#inline) **à proscrire**
 	* [Entre balises ```<style>```](#entre-des-balises-styles) **à proscrire**
-	* [Depuis un fichier CSS externe](#depuis-un-fichier-css-externe)
-* [Les sélecteurs CSS](#les-selecteurs-css)
+	* [Depuis un fichier CSS externe](#depuis-un-fichier-CSS-externe)
+* [Les sélecteurs CSS](#les-sélecteurs-CSS)
 	* [Balises](#les-balises)
 	* [Classes](#les-classes)
 	* [ID](#les-id)
 * [Les pseudos-classes](#les-pseudos-classes)
-	* [Sélectionner un élément](#selectionner-un-element)
-	* [styliser un état](#styliser-un-etat)
+	* [Sélectionner un élément](#sélectionner-un-élément)
+	* [Styliser un état](#styliser-un-état)
 * [Flexbox](#flexbox)
-	* [Les propriétés Flexbox](#les-proprietes-flexbox)
+	* [Les propriétés Flexbox](#les-propriétés-flexbox)
 	* [Flex-direction](#flex-direction)
 	* [Flex-wrap](#flex-wrap)
 	* [Flex-flow](#flex-flow)
@@ -130,6 +130,40 @@ Il est enfin possible d'appliquer un style à des éléments en fonction de leur
 
 Dans cet exemple, l'élement ayant pour identifiant **mon-id** aura son texte souligné.
 
+### Les pseudos classes
+
+#### Sélectionner un élément
+
+Il est possible de sélectionner des éléments sans leur attribuer de classe ou d'ID grâce aux pseudos classes.
+
+* ```:first-child``` : modifie le style du premier élément enfant de son parent
+* ```:nth-child``` : modifie le style du n ième élément enfant de son parent
+* ```:first-of-type``` : modifie le style du premier élément enfant du type choisi de son parent
+* ```:nth-of-type``` : modifie le style du n ième élément enfant du type choisi de son parent
+
+[Voir sur codepen](https://codepen.io/GCR/pen/OJVGzyj?editors=1100)
+
+#### Styliser un état
+
+Il est possible de styliser des états particuliers grâce aux pseudos classes.
+
+On peut ainsi définir un style au survol de la souris grâce à la pseudo classe :hover comme ceci :
+
+```
+a {
+	opacity:0.8;
+}
+a:hover {
+	opacity:1;
+}
+```
+
+Dans cet exemple, lorsqu'on survolera un lien, l'opacité de l'élément passera de 0.8 à 1.
+
+[Voir sur codepen](https://codepen.io/GCR/pen/GRJLyxO)
+
+
+#### Styliser un état
 
 
 ### Flexbox
