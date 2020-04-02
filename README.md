@@ -8,6 +8,13 @@ Toutes les ressources sont organisées par technologie, pour trouver des ressour
 
 
 ### Comment participer ?
+
+### **IMPORTANT Ne Pas toucher les fichiers et dossiers :**
+ ```
+ /_layouts/* , /_site/* , /Gmefile, /Gemfile.lock, /_config.yml
+ ```
+
+
 1. Forker le projet **(pas clonner!!!)**
 2. Créer une branche
 3. Ajouter votre modification en suivant l'organisation établie
