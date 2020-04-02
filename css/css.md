@@ -35,13 +35,13 @@
 
 ### Les propriétés flexbox
 
-* flex-direction
-* flex-wrap
-* flex-flow
-* justify-content
-* align-items
+* flex-direction(#flex-direction)
+* flex-wrap(#flex-wrap)
+* flex-flow(#flex-flow)
+* justify-content(#justify-content)
+* align-items(#align-items)
 
-#### Flex-direction
+#### #flex-direction
 
 La propriété ```flex-direction``` définit la direction dans laquelle le conteneur veut aligner ses éléments enfants
 
