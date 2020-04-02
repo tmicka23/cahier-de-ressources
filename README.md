@@ -24,7 +24,7 @@ Toutes les ressources sont organisées par technologie, pour trouver des ressour
 
 Si vous constater une erreur, ouvrez une issue et détailler au mieux le problème, moi ou l'un des contributeur nous feront un plaisir de la corriger.
 
-```
+```bash
  git clone https://github.com/AmelieChevalier/cahier-de-ressources.git
  git co -b travailPerso
  cd css
