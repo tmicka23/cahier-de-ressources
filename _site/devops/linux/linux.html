@@ -98,13 +98,14 @@
   </li>
   <li><code class="language-plaintext highlighter-rouge">ls</code> : Lister les fichiers dans un répertoire</li>
   <li><code class="language-plaintext highlighter-rouge">ls -l</code> : Afficher les détails des fichiers</li>
-  <li><code class="language-plaintext highlighter-rouge">ls -a</code> : Afficher les fichiers cachés / qui commencent par un point
+  <li><code class="language-plaintext highlighter-rouge">ls -a</code> : Afficher les fichiers cachés / qui commencent par un point</li>
+  <li><code class="language-plaintext highlighter-rouge">ls -l</code> : Afficher les fichiers avec les détails
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>Documents/
 <span class="nv">$ </span><span class="nb">ls
 </span>Dossier
 </code></pre></div>    </div>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">pwd</code>: Afficher le repertoire actuel
+  <li><code class="language-plaintext highlighter-rouge">pwd</code>: Afficher le repertoire actuel (print working directory)
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>Documents/
 <span class="nv">$ </span><span class="nb">pwd</span>
 /home/utilisateur/Document
@@ -112,11 +113,17 @@
   </li>
   <li><code class="language-plaintext highlighter-rouge">man [commande]</code> : Afficher la documentation d’une commande. RTFM !!</li>
   <li><code class="language-plaintext highlighter-rouge">mkdir</code> : Créer un dossier
--<code class="language-plaintext highlighter-rouge">mkdir -p</code>: Créer un dossier et sous-dossier</li>
+-<code class="language-plaintext highlighter-rouge">mkdir -p</code>: Créer un dossier et sous-dossier
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir</span> <span class="nt">-p</span> quetes/legumes-fruits/fruits
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">rm</code> : Supprimer un fichier</li>
   <li><code class="language-plaintext highlighter-rouge">rmdir</code> : Supprimer un dossier vide</li>
   <li><code class="language-plaintext highlighter-rouge">rmdir -r</code>: Supprimer un dossier récursivement (avec tous les dossiers et fichiers qu’il contient</li>
   <li><code class="language-plaintext highlighter-rouge">mv </code> : Déplacer un fichier (peut aussi servir à renommer)
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mv</span> /chemin/source/fichier /chemin/destination/fichier
+<span class="nv">$ </span><span class="nb">mv </span>fichier1 fichier2
+<span class="nv">$ </span><span class="nb">mv </span>fichier1 truc
 </code></pre></div>    </div>
   </li>
   <li><code class="language-plaintext highlighter-rouge">touch</code>: Créer un fichier
@@ -124,8 +131,13 @@
 <span class="nv">$ </span><span class="nb">touch</span> /chemin/source/nom_du_fichier.txt
 </code></pre></div>    </div>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">cp</code> : Copier un fichier
+  <li><code class="language-plaintext highlighter-rouge">cp</code> : Copier un/des fichier(s)
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp </span>fichier_a_copier.txt /chemin/source/
+<span class="nv">$ </span><span class="nb">cp </span>fichier_source1    fichier_source2    fichier_destination
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">cp -R</code>  : Copier un/des dossier(s)
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cp </span>dossier_source1    dossier_source2    dossier_destination
 </code></pre></div>    </div>
   </li>
   <li><code class="language-plaintext highlighter-rouge">&gt;</code>: stocker le résultat d’une commande dans un fichier spécifié par la suite
@@ -146,6 +158,7 @@ $ wc -l languages.txt
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- `sort` : Classer par ordre alphabétique
 ```shell
 $ sort languages.txt
+$ cat Swedish.csv Danish.csv Norwegian.csv | sort -u
 </code></pre></div></div>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">grep</code> : Rechercher une chaine de caractère dans un fichier (attention aux majuscules !!)
@@ -166,6 +179,61 @@ $ sort languages.txt
 <p>Exécuter une ligne de commande en mode super utilisateur</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo</span> &lt;commande&gt; : Exécuter la commande suivante en tant qu<span class="s1">'admin.
 </span></code></pre></div></div>
+
+<h2 id="trier--filtrer--rediriger">Trier / Filtrer / Rediriger</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">|</code> : Pipe, redirige la sortie d’une commande, afin de l’utiliser comme entrée</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;</code> : Modifier l’entrée</li>
+  <li><code class="language-plaintext highlighter-rouge">&gt;</code> : Modifier la sortie
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">ls</span> ~ <span class="o">&gt;</span> home-contents.txt
+le résultat de <span class="nb">ls</span> ~ a été écrit dans le fichier home-contents.txt
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">&gt;&gt;</code> : Ajoute la sortie à la suite de l’existant dans un fichier</li>
+  <li><code class="language-plaintext highlighter-rouge">dev/null</code> : “périphérique nul” (pseudo-périphérique qui ne garde pas les données)
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">ls</span> / <span class="o">&gt;</span> /dev/null
+ <span class="nv">$ </span><span class="o">&gt;</span> /dev/null
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="exemples-pratiques">Exemples pratiques</h2>
+<h2 id="exemple-1">Exemple 1:</h2>
+<p>Fichier Prenoms.csv avec utilisateur;genre;nationalité:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aaliyah;f;english (modern);0
+aapeli;m;finnish;0
+aapo;m;finnish;0
+aaren;m,f;english;0
+aarne;m;finnish;0
+</code></pre></div></div>
+
+<p>Compter le nombre de prénoms féminins et finlandais, voici ce qu’on écrira :</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">grep</span> <span class="s2">"f;french"</span> &lt;  Prenoms.csv |  <span class="nb">wc</span> <span class="nt">-l</span>
+</code></pre></div></div>
+<p>Prenoms.csv est redirigé vers grep (&lt;) où l’on ne va garder que le genre féminin et la nationalité french(“f;french”) . Tout cela est ensuite redirigé comme entrée ( | ) vers wc – l qui va en sortie nous donner le décompte.</p>
+
+<h2 id="exemple-2">Exemple 2:</h2>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">grep </span>swedish Prenoms.csv <span class="o">&gt;</span> Swedish.csv
+ Filtre Prenoms.csv avec le critère swedish et renvoie ça vers un fichier Swedish.csv
+</code></pre></div></div>
+
+<h2 id="exemple-3">Exemple 3:</h2>
+<p>Créer un fichier php_france_2019.csv contenant uniquement le nombre de wilders ayant fait du PHP, sur un campus en France, en 2019, à partir d’un fichier wilders.csv</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span> <span class="nb">grep</span> <span class="s2">"France,2019,PHP"</span>&lt; wilders.csv | w <span class="nt">-l</span>  <span class="o">&gt;</span>  php_france_2019.csv
+</code></pre></div></div>
+
+<h2 id="exemple-4">Exemple 4:</h2>
+
+<p>Créer un fichier javascript_biarritz_toulouse.csv contenant uniquement les wilders ayant fait du JavaScript, sur les campus de Toulouse et Biarritz. 
+Indice : tu peux avoir besoin de créer des fichiers “intermédiaires”, et de les concaténer.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span> 	<span class="nb">grep </span>Toulouse wilders.csv <span class="o">&gt;</span> toulouse.csv  
+ <span class="nv">$	</span><span class="nb">grep </span>JavaScript toulouse.csv <span class="o">&gt;</span> javascript_biarritz_toulouse.csv
+ <span class="nv">$	</span><span class="nb">grep </span>Biarritz wilders.csv <span class="o">&gt;</span> biarritz.csv
+ <span class="nv">$	</span><span class="nb">grep </span>JavaScript biarritz.csv <span class="o">&gt;&gt;</span> javascript_biarritz_toulouse.csv
+</code></pre></div></div>
+
 
 
       <footer class="site-footer">
