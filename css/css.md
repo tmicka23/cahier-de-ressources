@@ -35,11 +35,11 @@
 
 ### Les propriétés flexbox
 
-* flex-direction(#### flex-direction)
-* flex-wrap(#flex-wrap)
-* flex-flow(#flex-flow)
-* justify-content(#justify-content)
-* align-items(#align-items)
+* [flex-direction](####-flex-direction)
+* [flex-wrap](#flex-wrap)
+* [flex-flow](#flex-flow)
+* [justify-content](#justify-content)
+* [align-items](#align-items)
 
 #### flex-direction
 
