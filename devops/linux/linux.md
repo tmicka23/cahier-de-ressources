@@ -112,35 +112,40 @@ le résultat de ls ~ a été écrit dans le fichier home-contents.txt
  ```
 
 ## Exemples pratiques
-Exemple 1:
+## Exemple 1:
 Fichier Prenoms.csv avec utilisateur;genre;nationalité:
-	aaliyah;f;english (modern);0
+
+    aaliyah;f;english (modern);0
     aapeli;m;finnish;0
     aapo;m;finnish;0
     aaren;m,f;english;0
     aarne;m;finnish;0
+    
  Compter le nombre de prénoms féminins et finlandais, voici ce qu'on écrira :
 ```shell
  $ grep "f;french" <  Prenoms.csv |  wc -l
  ```
 Prenoms.csv est redirigé vers grep (<) où l’on ne va garder que le genre féminin et la nationalité french("f;french") . Tout cela est ensuite redirigé comme entrée ( | ) vers wc – l qui va en sortie nous donner le décompte.
 
-Exemple 2:
+## Exemple 2:
 ```shell
  $ grep swedish Prenoms.csv > Swedish.csv
  Filtre Prenoms.csv avec le critère swedish et renvoie ça vers un fichier Swedish.csv
  ```
  
-Exemple 3:
-```shell
+## Exemple 3:
 Créer un fichier php_france_2019.csv contenant uniquement le nombre de wilders ayant fait du PHP, sur un campus en France, en 2019, à partir d’un fichier wilders.csv
+```shell
  $  grep "France,2019,PHP"< wilders.csv | w -l  >  php_france_2019.csv
  ```
 
-Exemple 4:
+## Exemple 4:
+
+Créer un fichier javascript_biarritz_toulouse.csv contenant uniquement les wilders ayant fait du JavaScript, sur les campus de Toulouse et Biarritz. 
+Indice : tu peux avoir besoin de créer des fichiers "intermédiaires", et de les concaténer.
+
 ```shell
-Créer un fichier javascript_biarritz_toulouse.csv contenant uniquement les wilders ayant fait du JavaScript, sur les campus de Toulouse et Biarritz. Indice : tu peux avoir besoin de créer des fichiers "intermédiaires", et de les concaténer.
- $  grep Toulouse wilders.csv > toulouse.csv  
+ $  	grep Toulouse wilders.csv > toulouse.csv  
  $	grep JavaScript toulouse.csv > javascript_biarritz_toulouse.csv
  $	grep Biarritz wilders.csv > biarritz.csv
  $	grep JavaScript biarritz.csv >> javascript_biarritz_toulouse.csv
