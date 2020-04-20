@@ -26,7 +26,7 @@ Si vous constater une erreur, ouvrez une issue et détailler au mieux le problè
 
 ```bash
  git clone https://github.com/AmelieChevalier/cahier-de-ressources.git
- git co -b travailPerso
+ git checkout -b travailPerso
  cd css
  git add css.md
  git commit -m "test Amelie on css"
